@@ -1,0 +1,8 @@
+/.env
+.env
+seveso.log
+.idea/
+__pycache__/
+*.pyc
+.venv/
+venv/
