@@ -10,8 +10,7 @@ CHAT_ID = os.environ.get("TELEGRAM_CHAT")
 if not TOKEN or not CHAT_ID:
     raise ValueError("TELEGRAM_TOKEN e TELEGRAM_CHAT devono essere definiti")
 
-# Soglie in cm sopra lo zero idrometrico (fonte: ARPA Lombardia)
-# Ogni stazione ha tre livelli: giallo, arancione, rosso
+# Soglie ancora da perfezionare quando ottenuto un endpoint API funzionante.
 STATIONS = {
     "Cantù Asnago": {
         "idro_id": "8119",
