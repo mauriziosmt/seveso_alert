@@ -93,7 +93,7 @@ def get_active_level(levels, value):
     return active
 
 
-send("✅ Monitor Seveso avviato")
+send("✅ Monitor Seveso avviato. Il servizio è sperimentale e a scopo informativo, si raccomanda sempre di fare riferimento ai canali ufficiali.")
 logger.info("Monitor Seveso avviato")
 
 while True:
@@ -117,10 +117,11 @@ while True:
                 if active:
                     # Salita a un nuovo livello (o primo superamento)
                     msg = (
-                        f"{active['emoji']} Seveso — allerta {active_name.upper()}\n"
+                        f"{active['emoji']} Seveso — possibile livello {active_name.upper()}\n"
                         f"📍 {name}\n"
                         f"📏 Livello: {level} cm (soglia {active_name}: {active['threshold']} cm)\n"
                         f"🕐 Rilevato: {timestamp}"
+                        f"⚠️ Verifica SEMPRE sui canali ufficiali"
                     )
                     logger.warning(f"ALERT {active_name}: {name} a {level} cm")
                 else:
